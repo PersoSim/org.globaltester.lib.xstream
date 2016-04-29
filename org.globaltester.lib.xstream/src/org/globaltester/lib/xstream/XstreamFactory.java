@@ -1,5 +1,8 @@
 package org.globaltester.lib.xstream;
 
+import static org.globaltester.lib.xstream.ShouldSerializeMemberInstruction.SERIALIZE;
+import static org.globaltester.lib.xstream.ShouldSerializeMemberInstruction.DO_NOT_SERIALIZE;
+
 import java.lang.reflect.Constructor;
 
 import com.thoughtworks.xstream.XStream;
@@ -62,7 +65,10 @@ import com.thoughtworks.xstream.mapper.MapperWrapper;
 
 public class XstreamFactory {
 	
-	public static XStream get(HierarchicalStreamDriver hsd, ClassLoader ... classLoaders) {
+	public static XStream get(HierarchicalStreamDriver hsd,
+			ShouldSerializeMemberInstruction instruction,
+			ClassLoader... classLoaders) {
+		
 		XStream xstream = new XStream (hsd)
 		{
 			@Override
@@ -71,19 +77,19 @@ public class XstreamFactory {
 				return new MapperWrapper(next) {
 					
 					@SuppressWarnings("rawtypes")
-					public boolean shouldSerializeMember(Class definedIn,
-							String fieldName) {
-
-						//suppress all fields defined in AbstractProfile
-						if (definedIn.getName().equals("de.persosim.simulator.perso.AbstractProfile")) {
-							return false;
+					public boolean shouldSerializeMember(Class definedIn, String fieldName) {
+						
+						if(instruction != null) {
+							byte result = instruction.shouldSerializeMember(definedIn, fieldName);
+							
+							switch (result) {
+							case SERIALIZE:
+								return true;
+							case DO_NOT_SERIALIZE:
+								return false;
+							}
 						}
-
-						//suppress CryptoProviderCache
-						if (definedIn.getName().equals("de.persosim.simulator.protocols.ca.CaOid") && fieldName.equals("cryptoSupportCache")) {
-							return false;
-						}
-
+						
 						return super.shouldSerializeMember (definedIn, fieldName);
 					}
 				};
