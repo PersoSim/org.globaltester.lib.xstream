@@ -54,7 +54,7 @@ import com.thoughtworks.xstream.core.ClassLoaderReference;
 import com.thoughtworks.xstream.core.JVM;
 import com.thoughtworks.xstream.core.util.CompositeClassLoader;
 import com.thoughtworks.xstream.core.util.SelfStreamingInstanceChecker;
-import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
 import com.thoughtworks.xstream.mapper.Mapper;
 import com.thoughtworks.xstream.mapper.MapperWrapper;
 
@@ -62,8 +62,8 @@ import com.thoughtworks.xstream.mapper.MapperWrapper;
 
 public class XstreamFactory {
 	
-	public static XStream get(ClassLoader ... classLoaders) {
-		XStream xstream = new XStream (new DomDriver("UTF-8"))
+	public static XStream get(HierarchicalStreamDriver hsd, ClassLoader ... classLoaders) {
+		XStream xstream = new XStream (hsd)
 		{
 			@Override
 			protected MapperWrapper wrapMapper (MapperWrapper next) 
