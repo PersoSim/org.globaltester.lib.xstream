@@ -5,7 +5,9 @@ Bundle-SymbolicName: org.globaltester.lib.xstream
 Bundle-Version: 1.0.0
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ClassPath: lib/xstream-1.4.7.jar,
- src/
+ src/,
+ lib/jettison-1.2.jar,
+ .
 Export-Package: com.thoughtworks.xstream,
  com.thoughtworks.xstream.annotations,
  com.thoughtworks.xstream.converters,
@@ -25,8 +27,14 @@ Export-Package: com.thoughtworks.xstream,
  com.thoughtworks.xstream.io.path,
  com.thoughtworks.xstream.io.xml,
  com.thoughtworks.xstream.io.xml.xppdom,
+ com.thoughtworks.xstream.mapper,
  com.thoughtworks.xstream.persistence,
  com.thoughtworks.xstream.security,
+ org.codehaus.jettison,
+ org.codehaus.jettison.badgerfish,
+ org.codehaus.jettison.json,
+ org.codehaus.jettison.mapped,
+ org.codehaus.jettison.util,
  org.globaltester.lib.xstream
 Bundle-Vendor: HJP Consulting GmbH
 Bundle-ActivationPolicy: lazy
