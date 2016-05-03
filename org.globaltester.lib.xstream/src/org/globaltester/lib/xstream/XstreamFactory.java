@@ -231,4 +231,10 @@ public class XstreamFactory {
 		return xstream;
 	}
 	
+	public static XStream get(HierarchicalStreamDriver hsd,
+			ClassLoader... classLoaders) {
+		
+		return get(hsd, null, classLoaders);
+	}
+	
 }
