@@ -36,5 +36,5 @@ Export-Package: com.thoughtworks.xstream,
  org.codehaus.jettison.mapped,
  org.codehaus.jettison.util,
  org.globaltester.lib.xstream
-Bundle-Vendor: HJP Consulting GmbH
+Bundle-Vendor: secunet Security Networks AG
 Bundle-ActivationPolicy: lazy
