@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: GT lib XStream
 Bundle-SymbolicName: org.globaltester.lib.xstream
-Bundle-Version: 3.8.2.qualifier
+Bundle-Version: 3.8.3.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ClassPath: lib/xstream-1.4.7.jar,
  src/,
