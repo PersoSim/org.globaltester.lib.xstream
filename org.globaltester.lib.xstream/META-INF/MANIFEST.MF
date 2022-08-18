@@ -4,8 +4,8 @@ Bundle-Name: GT lib XStream
 Bundle-SymbolicName: org.globaltester.lib.xstream
 Bundle-Version: 3.9.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-ClassPath: lib/xstream-1.4.7.jar,
- src/,
+Bundle-ClassPath: src/,
+ lib/xstream-1.4.19.jar,
  lib/jettison-1.2.jar,
  .
 Export-Package: com.thoughtworks.xstream,
@@ -17,6 +17,7 @@ Export-Package: com.thoughtworks.xstream,
  com.thoughtworks.xstream.converters.extended,
  com.thoughtworks.xstream.converters.javabean,
  com.thoughtworks.xstream.converters.reflection,
+ com.thoughtworks.xstream.converters.time,
  com.thoughtworks.xstream.core,
  com.thoughtworks.xstream.core.util,
  com.thoughtworks.xstream.io,
@@ -38,3 +39,4 @@ Export-Package: com.thoughtworks.xstream,
  org.globaltester.lib.xstream
 Bundle-Vendor: secunet Security Networks AG
 Bundle-ActivationPolicy: lazy
+Require-Bundle: javax.inject

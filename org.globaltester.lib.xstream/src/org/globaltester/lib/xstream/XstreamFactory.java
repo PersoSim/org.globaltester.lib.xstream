@@ -228,6 +228,12 @@ public class XstreamFactory {
 			((CompositeClassLoader) xstream.getClassLoader()).add(loader);	
 		}
 		
+		xstream.allowTypesByWildcard(new String[] { 
+		        "com.secunet.**",
+		        "de.persosim.**",
+		        "org.globaltester.**"
+		        });
+		
 		return xstream;
 	}
 	
