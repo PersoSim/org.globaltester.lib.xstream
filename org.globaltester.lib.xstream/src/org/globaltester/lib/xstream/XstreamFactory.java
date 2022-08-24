@@ -231,7 +231,10 @@ public class XstreamFactory {
 		xstream.allowTypesByWildcard(new String[] { 
 		        "com.secunet.**",
 		        "de.persosim.**",
-		        "org.globaltester.**"
+		        "org.globaltester.**",
+		        "java.security.**",
+		        "org.bouncycastle.**",
+		        "org.spongycastle.**"
 		        });
 		
 		return xstream;
