@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
+Automatic-Module-Name: org.globaltester.lib.xstream
 Bundle-Name: GT lib XStream
 Bundle-SymbolicName: org.globaltester.lib.xstream
 Bundle-Version: 3.9.0.qualifier
