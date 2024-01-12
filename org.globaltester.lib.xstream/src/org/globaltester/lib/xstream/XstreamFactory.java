@@ -60,6 +60,7 @@ import com.thoughtworks.xstream.core.util.SelfStreamingInstanceChecker;
 import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
 import com.thoughtworks.xstream.mapper.Mapper;
 import com.thoughtworks.xstream.mapper.MapperWrapper;
+import com.thoughtworks.xstream.security.AnyTypePermission;
 
 
 
@@ -237,6 +238,7 @@ public class XstreamFactory {
 		        "org.spongycastle.**"
 		        });
 		
+		xstream.addPermission(AnyTypePermission.ANY); // allow all; no limitations for deserialization
 		return xstream;
 	}
 	
