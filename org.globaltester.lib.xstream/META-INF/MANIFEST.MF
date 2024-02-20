@@ -4,7 +4,7 @@ Automatic-Module-Name: org.globaltester.lib.xstream
 Bundle-Name: GT lib XStream
 Bundle-SymbolicName: org.globaltester.lib.xstream
 Bundle-Version: 3.9.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ClassPath: src/,
  lib/xstream-1.4.20.jar,
  lib/jettison-1.5.4.jar,
