@@ -40,4 +40,4 @@ Export-Package: com.thoughtworks.xstream,
  org.globaltester.lib.xstream
 Bundle-Vendor: secunet Security Networks AG
 Bundle-ActivationPolicy: lazy
-Require-Bundle: javax.inject
+Require-Bundle: jakarta.inject.jakarta.inject-api
