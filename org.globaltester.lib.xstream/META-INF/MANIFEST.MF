@@ -1,12 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
+Automatic-Module-Name: org.globaltester.lib.xstream
 Bundle-Name: GT lib XStream
 Bundle-SymbolicName: org.globaltester.lib.xstream
-Bundle-Version: 3.9.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-ClassPath: lib/xstream-1.4.7.jar,
- src/,
- lib/jettison-1.2.jar,
+Bundle-Version: 3.10.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ClassPath: src/,
+ lib/xstream-1.4.20.jar,
+ lib/jettison-1.5.4.jar,
  .
 Export-Package: com.thoughtworks.xstream,
  com.thoughtworks.xstream.annotations,
@@ -17,6 +18,7 @@ Export-Package: com.thoughtworks.xstream,
  com.thoughtworks.xstream.converters.extended,
  com.thoughtworks.xstream.converters.javabean,
  com.thoughtworks.xstream.converters.reflection,
+ com.thoughtworks.xstream.converters.time,
  com.thoughtworks.xstream.core,
  com.thoughtworks.xstream.core.util,
  com.thoughtworks.xstream.io,
@@ -38,3 +40,4 @@ Export-Package: com.thoughtworks.xstream,
  org.globaltester.lib.xstream
 Bundle-Vendor: secunet Security Networks AG
 Bundle-ActivationPolicy: lazy
+Require-Bundle: jakarta.inject.jakarta.inject-api

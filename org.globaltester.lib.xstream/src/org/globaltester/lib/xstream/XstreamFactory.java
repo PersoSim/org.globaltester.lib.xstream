@@ -60,6 +60,7 @@ import com.thoughtworks.xstream.core.util.SelfStreamingInstanceChecker;
 import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
 import com.thoughtworks.xstream.mapper.Mapper;
 import com.thoughtworks.xstream.mapper.MapperWrapper;
+import com.thoughtworks.xstream.security.AnyTypePermission;
 
 
 
@@ -228,6 +229,16 @@ public class XstreamFactory {
 			((CompositeClassLoader) xstream.getClassLoader()).add(loader);	
 		}
 		
+		xstream.allowTypesByWildcard(new String[] { 
+		        "com.secunet.**",
+		        "de.persosim.**",
+		        "org.globaltester.**",
+		        "java.security.**",
+		        "org.bouncycastle.**",
+		        "org.spongycastle.**"
+		        });
+		
+		xstream.addPermission(AnyTypePermission.ANY); // allow all; no limitations for deserialization
 		return xstream;
 	}
 	
