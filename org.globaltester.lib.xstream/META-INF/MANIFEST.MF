@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Automatic-Module-Name: org.globaltester.lib.xstream
 Bundle-Name: GT lib XStream
 Bundle-SymbolicName: org.globaltester.lib.xstream
-Bundle-Version: 3.10.1.qualifier
+Bundle-Version: 3.10.2.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ClassPath: src/,
  lib/xstream-1.4.20.jar,
